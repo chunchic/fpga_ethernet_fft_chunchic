@@ -13,6 +13,9 @@
 *.bit
 *.bin
 *.ltx
+*.xpr
+#*.mem
+*.py
 *.runs/
 *.cache/
 *.hw/

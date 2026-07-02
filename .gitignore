@@ -1,0 +1,42 @@
+# Vivado generated files
+*.jou
+*.log
+*.str
+*.tmp
+*.backup.*
+*.zip
+*.wdb
+*.vcd
+*.saif
+*.pb
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.srcs/
+*.gen/
+*.Xil/
+
+# Vitis / SDK
+Debug/
+Release/
+.vscode/
+.metadata/
+*.elf
+*.map
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -24,6 +24,7 @@
 *.srcs/
 *.gen/
 *.Xil/
+*.wcfg/
 
 # Vitis / SDK
 Debug/

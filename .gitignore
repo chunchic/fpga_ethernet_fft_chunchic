@@ -44,3 +44,4 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+waveform_gen/frame_counter_tb_behav.wcfg

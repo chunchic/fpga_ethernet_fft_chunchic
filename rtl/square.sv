@@ -27,7 +27,6 @@ module square #(
 
     (
     input clk, reset,
-    input enable,
     
     input [PHASE_WIDTH-1:0] phase_inc,
     output logic signed [WIDTH-1:0] square_out
@@ -41,7 +40,7 @@ module square #(
         if (reset) begin
             phase_acc <= 'b0;
             square_out <= 'b0;
-        end else if (enable) begin
+        end else begin
             phase_acc <= phase_acc + phase_inc;
             if (phase_acc[PHASE_WIDTH-1]) begin
                 square_out <= pos_amp;

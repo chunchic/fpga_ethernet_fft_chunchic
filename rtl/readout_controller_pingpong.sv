@@ -38,17 +38,23 @@ module readout_controller_pingpong #(
     always_ff @(posedge clk) begin
         if (reset) begin
             read_state <= 1'b0;
+            ctrl_valid <= 1'b0;
+            ctrl_start <= 1'b0;
+            ctrl_end <= 1'b0;
         end else begin
             if (f_ready) begin
                 read_state <= 1'b1;
             end
+            ctrl_valid <= read_state;
+            ctrl_start <= read_state && (sample_index == 0);
+            ctrl_end <= read_state && (sample_index == FRAME_SIZE-1);
         end
     end
 
     assign read_en = read_state;
     assign read_addr = sample_index;
-    assign ctrl_valid = read_state;
-    assign ctrl_start = read_state && (sample_index == 0);
-    assign ctrl_end = read_state && (FRAME_SIZE-1);
+//    assign ctrl_valid = read_state;
+//    assign ctrl_start = read_state && (sample_index == 0);
+//    assign ctrl_end = read_state && (sample_index == FRAME_SIZE-1);
 
 endmodule
